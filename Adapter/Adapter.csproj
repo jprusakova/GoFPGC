@@ -51,18 +51,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adapters\Level.cs" />
+    <Compile Include="Adapters\IOldLogger.cs" />
+    <Compile Include="Adapters\INewLogger.cs" />
+    <Compile Include="Adapters\LoggerAdapter.cs" />
+    <Compile Include="Examples\AfterAdapter.cs" />
+    <Compile Include="Examples\AfterWrapper.cs" />
+    <Compile Include="Examples\BeforeAdapter.cs" />
+    <Compile Include="Examples\BeforeWrapper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Wrapper\IWebSecurityWrapper.cs" />
-    <Compile Include="Wrapper\WebSecurityWrapper.cs" />
+    <Compile Include="Wrapper\IWebSecurityProvider.cs" />
+    <Compile Include="Wrapper\WebSecurityProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Adapter\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
