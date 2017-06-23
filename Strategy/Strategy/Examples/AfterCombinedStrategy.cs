@@ -20,9 +20,21 @@
 
         public string[] DescribePhrase(string phrase)
         {
+            var messages = new List<string>();
+            foreach (var describer in this.phraseDescribers)
+            {
+                var message = describer.Describe(phrase);
+                if (message != null)
+                    messages.Add(message);
+            }
+
+            //return messages.ToArray();
+
+
             return this.phraseDescribers
                 .Select(pd => pd.Describe(phrase))
                 .Where(d => d != null)
+                .AsParallel()
                 .ToArray();
         }
     }

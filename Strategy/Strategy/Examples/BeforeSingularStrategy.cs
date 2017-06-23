@@ -10,7 +10,7 @@
                 return values;
             }
 
-            if (values.Length < 10000) // breaking point between MergeSort and BubbleSort
+            if (values.Length > 10000) // breaking point between MergeSort and BubbleSort
             {
                 // code for mergesort
                 return values;

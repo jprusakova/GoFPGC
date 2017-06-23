@@ -4,7 +4,7 @@
     {
         public int Priority { get; } = 1; // should be chosen over other sorters.
 
-        public bool ShouldBeSorter(int[] values)
+        public bool IsGoodSorterFor(int[] values)
         {
             // Weed out conditions bad for bubble sort
             return true;

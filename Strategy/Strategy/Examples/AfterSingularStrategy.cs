@@ -22,7 +22,7 @@
         public int[] Sort(int[] values)
         {
             return this.sortingMethods
-                .Where(sm => sm.ShouldBeSorter(values))
+                .Where(sm => sm.IsGoodSorterFor(values))
                 .OrderBy(sm => sm.Priority)
                 .First()
                 .Sort(values);

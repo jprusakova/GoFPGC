@@ -4,7 +4,7 @@
     {
         int Priority { get; }
 
-        bool ShouldBeSorter(int[] values);
+        bool IsGoodSorterFor(int[] values);
 
         int[] Sort(int[] values);
     }

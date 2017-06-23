@@ -4,7 +4,7 @@
     {
         public int Priority { get; } = 3; // there are better sorters.
 
-        public bool ShouldBeSorter(int[] values)
+        public bool IsGoodSorterFor(int[] values)
         {
             // Weed out conditions bad for merge sort
             return true;

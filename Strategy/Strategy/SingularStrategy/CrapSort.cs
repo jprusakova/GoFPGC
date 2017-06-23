@@ -4,7 +4,7 @@
     {
         public int Priority { get; } = int.MaxValue; // this is a last chance sorting method
 
-        public bool ShouldBeSorter(int[] values)
+        public bool IsGoodSorterFor(int[] values)
         {
             // Always return true, because this is the last catch.
             return true;
