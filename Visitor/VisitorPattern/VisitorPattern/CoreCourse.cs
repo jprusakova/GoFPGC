@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace VisitorPattern
 {
-    public class CoreCourse : Course, IReceiveVisitor
+    public class CoreCourse : Course
     {
    
         private readonly List<string> _towardMajor;

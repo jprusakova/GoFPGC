@@ -24,6 +24,17 @@ namespace VisitorPatternTest
         }
 
         [TestMethod]
+        public void MultipleElectiveShouldCountUpToMaxElectiveHours()
+        {
+            ElectiveCourse elective = new ElectiveCourse("Elective");
+            elective.ReceiveVisitor(_calculator);
+            ElectiveCourse elective2 = new ElectiveCourse("Elective2");
+            elective2.ReceiveVisitor(_calculator);
+
+            Assert.AreEqual(3, _calculator.TotalCreditHours);
+        }
+
+        [TestMethod]
         public void CoreCourseForDegreeShouldReturnHours()
         {
             CoreCourse coreCourse = new CoreCourse(".Net programming", 4, "CS");
